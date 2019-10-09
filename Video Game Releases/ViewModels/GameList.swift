@@ -19,7 +19,6 @@ class GameList: ObservableObject {
     func reload(platform: Platform = .ps4) {
         self.games = []
         self.isLoading = true
-        
         gameService.fetchPopularGames(for: platform) { [weak self]  (result) in
             self?.isLoading = false
             
