@@ -23,3 +23,10 @@ struct GameRootView: View {
         .edgesIgnoringSafeArea(.top)
     }
 }
+
+struct GameRootView_Previews: PreviewProvider {
+    static var previews: some View {
+        GameRootView()
+    }
+}
+

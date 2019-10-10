@@ -10,28 +10,35 @@ import SwiftUI
 
  struct GameListView: View {
     
+    
     @ObservedObject var gameList: GameList = GameList()
        var platform: Platform = .ps4
        
        var body: some View {
            NavigationView {
-               Group {
-                   if gameList.isLoading {
-                       LoadingView()
-                   } else {
-                       List(self.gameList.games) { (game: Game) in
-                           NavigationLink(destination: GameDetailView(gameId: game.id)) {
-                               GameRowView(game: game)
+                   Group {
+                       if gameList.isLoading {
+                           LoadingView()
+                       } else {
+                           List(self.gameList.games) { (game: Game) in
+                               NavigationLink(destination: GameDetailView(gameId: game.id)) {
+                                   GameRowView(game: game)
+                               }
                            }
                        }
                    }
+                   .navigationBarTitle(Text(self.platform.description), displayMode: .inline)
                }
-               .navigationBarTitle(self.platform.description)
+               .onAppear {
+                   if self.gameList.games.isEmpty {
+                       self.gameList.reload(platform: self.platform)
+                   }
            }
-           .onAppear {
-               if self.gameList.games.isEmpty {
-                   self.gameList.reload(platform: self.platform)
-               }
-           }
-       }
-   }
+        }
+    }
+
+struct GameListView_Previews: PreviewProvider {
+    static var previews: some View {
+        GameListView()
+    }
+}
