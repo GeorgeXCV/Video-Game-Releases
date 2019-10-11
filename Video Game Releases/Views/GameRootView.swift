@@ -10,6 +10,8 @@ import SwiftUI
 
 struct GameRootView: View {
     
+    
+    
     var body: some View {
         TabView {
             ForEach(Platform.allCases, id: \.self) { p in

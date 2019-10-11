@@ -20,7 +20,7 @@ struct GameRowView: View {
                 GeometryReader { geometry in
                     Image(uiImage: self.imageLoader.image!)
                         .resizable(resizingMode: Image.ResizingMode.stretch)
-                        .aspectRatio(contentMode: .fill)
+//                        .aspectRatio(contentMode: .fill)
                         .frame(maxWidth: geometry.size.width)
                         .clipped()
                 }

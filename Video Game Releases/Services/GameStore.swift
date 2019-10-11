@@ -25,7 +25,7 @@ class GameStore: GameService {
     let date = String(Date().millisecondsSince1970)
     
     func fetchPopularGames(for platform: Platform, completion: @escaping (Result<[Game], Error>) -> Void) {
-        iGDB.apiRequest(endpoint: .GAMES, apicalypseQuery: "fields name, first_release_date, id, popularity, rating, involved_companies.company.name, cover.image_id; where (platforms = (\(platform.rawValue)) & first_release_date > \(date.subString(from:0,to:9)) ); sort first_release_date asc; limit 50;", dataResponse: { bytes in
+        iGDB.apiRequest(endpoint: .GAMES, apicalypseQuery: "fields name, first_release_date, id, popularity, rating, involved_companies.company.name, cover.image_id; where (platforms = (\(platform.rawValue)) & first_release_date > \(date.subString(from:0,to:9))) & version_parent = null; sort first_release_date asc; limit 50;", dataResponse: { bytes in
             guard let gameResults = try? Proto_GameResult(serializedData: bytes) else {
                 print(self.date.subString(from:0,to:9))
                 return
@@ -84,10 +84,6 @@ fileprivate extension Game {
     
 }
 
-//func currentDate() {
-//    let date = Date().millisecondsSince1970
-//
-//}
 
 extension Date {
     
