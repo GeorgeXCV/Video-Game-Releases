@@ -25,7 +25,7 @@ struct Game {
     
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/YYYY"
+        formatter.dateFormat = "EEEE, MMM d, yyyy"
         return formatter
     }()
     
