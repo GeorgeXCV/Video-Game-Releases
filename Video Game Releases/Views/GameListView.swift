@@ -27,7 +27,7 @@ import SwiftUI
                            }
                        }
                    }
-                   .navigationBarTitle(Text(self.platform.description), displayMode: .inline)
+                   .navigationBarTitle(Text(self.platform.description), displayMode: .large)
                }
                .onAppear {
                    if self.gameList.games.isEmpty {

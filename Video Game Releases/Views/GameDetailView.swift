@@ -20,6 +20,8 @@ struct GameDetailView: View {
                     if (self.gameDetail.game != nil) {
                         List {                                          // Create a List and put the Image on top, followed by section for text of storyline, summary etc.
                             PosterView(image: self.imageLoader.image)
+                            .offset(y: 30)
+                            .padding(.bottom, 30)
                                 .onAppear {
                                     if let url = self.gameDetail.game?.coverURL {
                                         self.imageLoader.downloadImage(url: url)
@@ -43,11 +45,10 @@ struct GameDetailView: View {
             
             var image: UIImage?
             var body: some View {
-                ZStack {
+                ZStack() {
                     Rectangle()
                         .foregroundColor(.gray)
-                        .aspectRatio(500/750, contentMode: .fit)
-                    
+                        .aspectRatio(500/700, contentMode: .fit)
                     if (image != nil) {
                         Image(uiImage: self.image!)
                             .resizable()
