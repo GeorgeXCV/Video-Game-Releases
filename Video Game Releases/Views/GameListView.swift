@@ -10,7 +10,6 @@ import SwiftUI
 
  struct GameListView: View {
     
-    
     @ObservedObject var gameList: GameList = GameList()
        var platform: Platform = .ps4
        

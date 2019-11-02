@@ -38,7 +38,7 @@
 		5E3CB360234E613A0033C1BB /* GameListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
 		5E3CB368234E616C0033C1BB /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		5EA04029234FAB1400249519 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		5EFA7724234AA006001DD453 /* Video Game Releases.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Video Game Releases.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EFA7724234AA006001DD453 /* Game Releases.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Releases.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EFA7727234AA006001DD453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EFA7729234AA006001DD453 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5EFA772D234AA008001DD453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		5EFA7725234AA006001DD453 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5EFA7724234AA006001DD453 /* Video Game Releases.app */,
+				5EFA7724234AA006001DD453 /* Game Releases.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,7 +194,7 @@
 			);
 			name = "Video Game Releases";
 			productName = "Video Game Releases";
-			productReference = 5EFA7724234AA006001DD453 /* Video Game Releases.app */;
+			productReference = 5EFA7724234AA006001DD453 /* Game Releases.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -451,7 +451,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "george.ashton.Video-Game-Releases";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Game Releases";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -472,7 +472,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "george.ashton.Video-Game-Releases";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Game Releases";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
